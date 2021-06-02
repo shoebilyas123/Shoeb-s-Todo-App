@@ -1,0 +1,251 @@
+:root {
+  /* Primary Colors */
+  --primRed: #ff6363;
+  --primtPurple: #7c14ff;
+  --primGradient: linear-gradient(-120deg, var(--primRed), var(--primtPurple));
+  /* Neutral Colors */
+  --whiteClr: #fff;
+  --veryLightGrayBorder: #d3d1d1;
+  --veryLightGray: #bcbcbc;
+  --defTodoColor: #585858;
+
+  /* Misc */
+  --borderHover: #ff636381;
+  --todoDone: #f7c7c7;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 18px;
+  background: var(--primGradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/*==============MAIN APP=============== */
+/* App container */
+.app_container {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  min-height: 540px;
+  width: 540px;
+}
+
+/* Create list and todo item  style */
+.list_create,
+.todo {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-start;
+  padding: 5px;
+  background: var(--whiteClr);
+}
+.list_create {
+  border: 1px solid var(--veryLightGray);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* Style for create and check btn */
+.create_btn,
+.check_btn {
+  display: flex;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2.5px solid var(--primRed);
+  margin-right: 15px;
+  align-items: center;
+  justify-content: center;
+  transition: border 0.2s;
+  padding: 5px;
+}
+
+.create_btn {
+  font-size: 25px;
+  color: white;
+  background-color: var(--primRed);
+}
+/* Input text for creating todo */
+.create_text {
+  flex-grow: 1;
+  border: none;
+  background: var(--whiteClr);
+  outline: none;
+  color: var(--veryLightGray);
+  font-size: 18px;
+}
+
+/* Todo item */
+.todo_container {
+  margin-top: 15px;
+  border-radius: 5px;
+  overflow-x: hidden;
+  color: var(--defTodoColor);
+}
+.todo {
+  border-radius: 0;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--veryLightGrayBorder);
+  padding: 15px;
+  transition: box-shadow 0.2s;
+  word-wrap: break-word;
+}
+.todo .generic {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 80%;
+  word-wrap: break-word;
+}
+
+.functionalities {
+  display: flex;
+  flex-direction: row;
+}
+
+.functionalities .btn {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+  border: none;
+  color: var(--whiteClr);
+  border-radius: 5px;
+}
+
+.btn_edit {
+  background-color: var(--defTodoColor);
+}
+
+.btn_delete {
+  background-color: var(--primRed);
+}
+
+/* Hovering Effects */
+
+.create_btn,
+.check_btn,
+.btn_delete,
+.btn_edit {
+  transition: border 0.2s, color 0.2s;
+  cursor: pointer;
+}
+
+.create_btn:hover {
+  background-color: var(--whiteClr);
+  color: var(--primRed);
+}
+
+.check_btn:hover {
+  border-color: var(--borderHover);
+}
+.btn_delete:hover {
+  background-color: var(--whiteClr);
+  color: var(--primRed);
+  box-shadow: 0 0 2.5px var(--veryLightGray);
+}
+.btn_edit:hover {
+  background-color: var(--whiteClr);
+  color: var(--defTodoColor);
+  box-shadow: 0 0 2.5px var(--veryLightGray);
+}
+
+/* active states*/
+.todo__done {
+  background-color: var(--todoDone);
+}
+.todo__done .todo_text {
+  text-decoration: line-through;
+  color: var(--defTodoColor);
+}
+
+/* Checked */
+.checked {
+  background-color: var(--primRed);
+}
+.checked i {
+  color: var(--whiteClr);
+}
+/* ================Overylay modal================== */
+
+/* overlay */
+.overlay {
+  background-color: #bcbcbcc5;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* filter: blur(35px); */
+}
+
+.modal_change_text {
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+  background-color: var(--whiteClr);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px #46464698;
+  padding: 15px;
+}
+
+.edit_todo_text {
+  border: none;
+  padding: 5px 20px;
+  border-radius: 5px;
+  background-color: var(--primRed);
+  color: var(--whiteClr);
+  border: 2px solid var(--primRed);
+  margin: auto;
+  width: 200px;
+}
+
+.edit_todo_text:hover {
+  border: 2px solid #f7c7c7;
+  padding: 5px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.modal_change_text .text-editing {
+  margin: auto;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+#edit_text {
+  padding: 5px;
+  width: 200px;
+  margin: auto;
+  outline: none;
+  border: none;
+  background: rgb(228, 228, 228);
+  border-radius: 5px;
+  color: var(--defTodoColor);
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Attribution */
+
+.attribution {
+  margin: 15px;
+  color: rgb(32, 18, 46);
+}
+
+.attribution a {
+  text-decoration: none;
+  color: #fff;
+}
