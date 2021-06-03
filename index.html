@@ -1,44 +1,40 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shoeb's Todo App</title>
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Stylesheets -->
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="stylesheet" type="text/css" href="css/mediaQueries.css" />
-    <!-- External Scripts -->
-    <script
-      src="https://kit.fontawesome.com/628ce2bac5.js"
-      crossorigin="anonymous"
-    ></script>
-    <script defer src="scripts/script.js"></script>
-  </head>
-  <body>
-    <div class="overlay hidden">
-      <div class="modal_change_text">
-        <div class="text-editing">
-          <label for="edit_text">Edit Todo</label>
-          <input type="text" id="edit_text" />
-        </div>
-        <button class="edit_todo_text">Okay</button>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shoeb's Todo App</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- Stylesheets -->
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="css/mediaQueries.css" />
+  <!-- External Scripts -->
+  <script src="https://kit.fontawesome.com/628ce2bac5.js" crossorigin="anonymous"></script>
+  <script defer src="scripts/script.js"></script>
+</head>
+
+<body>
+  <div class="overlay hidden">
+    <div class="modal_change_text">
+      <div class="text-editing">
+        <label for="edit_text">Edit Todo</label>
+        <input type="text" id="edit_text" />
       </div>
+      <button class="edit_todo_text">Okay</button>
     </div>
-    <main class="app_container">
-      <div class="list_create">
-        <div class="create_btn">+</div>
-        <input class="create_text" type="text" value="Create a new todo..." />
-      </div>
-      <div class="todo_container">
-        
-        <!-- Todo done html -->
-        <!-- <div class="todo todo__done">
+  </div>
+  <main class="app_container">
+    <div class="list_create">
+      <div class="create_btn">+</div>
+      <input class="create_text" type="text" value="Create a new todo..." />
+    </div>
+    <div class="todo_container">
+
+      <!-- Todo done html -->
+      <!-- <div class="todo todo__done">
           <div class="generic">
             <div class="check_btn checked">
               <i class="fas fa-check"></i>
@@ -52,10 +48,12 @@
             </button>
           </div>
         </div> -->
-      </div>
-    </main>
-    <div class="attribution">
-      <p>Hosted on <a href="https://netlify.app/" target="_blank">Netlify</a> . Made by <a href="https://www.linkedin.com/in/shoeb-ilyas-6754aa1b6/" target="_blank">Shoeb Ilyas</p>
     </div>
-  </body>
+  </main>
+  <div class="attribution">
+    <p>Hosted on <a href="https://netlify.app/" target="_blank">Netlify</a> . Made by <a
+        href="https://www.linkedin.com/in/shoeb-ilyas-6754aa1b6/" target="_blank">Shoeb Ilyas</p>
+  </div>
+</body>
+
 </html>

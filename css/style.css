@@ -109,6 +109,13 @@ body {
   word-wrap: break-word;
 }
 
+/* Changes to be done */
+.todo_text{
+  width: 98%;
+  word-wrap: break-word;
+}
+
+
 .functionalities {
   display: flex;
   flex-direction: row;
