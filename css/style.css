@@ -85,6 +85,11 @@ body {
   font-size: 18px;
 }
 
+.check_btn{
+  width: 25px;
+  height: 25px;
+}
+
 /* Todo item */
 .todo_container {
   margin-top: 15px;
