@@ -86,8 +86,7 @@ class App {
   _createHTML(v) {
     return `<div class="todo">
     <div class="generic">
-      <div class="check_btn">
-      </div>
+      <div class="check_btn"></div>
       <p class="todo_text">${v}</p>
     </div>
     <div class="functionalities">
