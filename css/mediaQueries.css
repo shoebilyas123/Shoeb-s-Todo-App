@@ -1,9 +1,19 @@
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 768px) {
   body {
     overflow-x: hidden;
   }
   .app_container {
     margin-top: 5px;
     width: 95%;
+  }
+
+  /* Changes to be done */
+  .functionalities{
+    flex-direction: column;
+  }
+
+  .functionalities .btn{
+    margin-bottom: 3px;
+    margin-right: 0;
   }
 }
